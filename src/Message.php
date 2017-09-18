@@ -118,7 +118,7 @@ class Message extends BaseMessage
      */
     public function getCharset()
     {
-        return $this-charset;
+        return $this->charset;
     }
 
     /**
