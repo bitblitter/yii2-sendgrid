@@ -36,6 +36,8 @@ use yii\mail\MailerInterface;
  */
 class Message extends BaseMessage
 {
+    private $charset = 'UTF-8';
+
     /**
      * @var string|array from
      */
@@ -116,7 +118,7 @@ class Message extends BaseMessage
      */
     public function getCharset()
     {
-        throw new NotSupportedException();
+        return $this-charset;
     }
 
     /**
@@ -124,7 +126,7 @@ class Message extends BaseMessage
      */
     public function setCharset($charset)
     {
-        throw new NotSupportedException();
+        $this->charset = $charset;
     }
 
     /**
